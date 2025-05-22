@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Mathisse Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- start -->
+    <div class="overlay" onclick="startMusic()">
+        <h1>Klik om te starten...</h1>
+    </div>
+
+    <!-- after -->
+    <div class="page-content">
+        <div class="container">
+            <div class="profile-card">
+                <img src="logo2.png" alt="Profile" class="profile-pic">
+                <h1>mathisse.nl</h1>
+                <p>Working on 55 Development</p>
+                <div class="social-links">
+                    <a href="https://discord.mathisse.nl/" class="social-icon discord" target="_blank">
+                        <img src="discord.png" alt="Discord">
+                    </a>
+                    <a href="https://www.youtube.com/@mathisse2104" class="social-icon youtube" target="_blank">
+                        <img src="youtube.png" alt="YouTube">
+                    </a>
+                    <a href="https://www.twitch.tv/mathissegaming" class="social-icon twitch" target="_blank">
+                        <img src="twitch.png" alt="Twitch">
+                    </a>
+                    <a href="https://www.tiktok.com/@mathisse210" class="social-icon tiktok" target="_blank">
+                        <img src="tiktok.png" alt="TikTok">
+                    </a>
+                    <a href="https://github.com/mathisse2104" class="social-icon github" target="_blank">
+                        <img src="github.png" alt="Github">
+                    </a>
+                    <a href="https://forum.cfx.re/u/mathisse2104/summary" class="social-icon fivem" target="_blank">
+                        <img src="fivem.png" alt="Fivem">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUDIO -->
+    <audio id="background-music" src="music1.mp3"></audio>
+
+    <!-- music controls -->
+    <div class="music-controls" id="musicControls">
+        <div class="music-info">
+            <span id="track-title">Klik op het scherm en er zal muziek beginnen te spelen</span>
+        </div>
+        <div class="music-buttons">
+            <button onclick="previousTrack()">⏮</button>
+            <button onclick="togglePlay()">⏯</button>
+            <button onclick="nextTrack()">⏭</button>
+        </div>
+        <div class="music-progress">
+            <span id="current-time">0:00</span>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+
+    <!-- COOKIE POPUP -->
+    <div class="cookie-popup" id="cookiePopup">
+        <p>We use cookies to ensure you get the best experience on our website. By continuing, you agree to our <a href="https://discord.com/channels/937399168345981030/1282225662249406577">Terms of Services</a>.</p>
+        <button onclick="acceptCookies()">Accept</button>
+        <button onclick="rejectCookies()">Reject</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

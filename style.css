@@ -1,0 +1,245 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background: url('background2.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay h1 {
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.page-content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.page-content.visible {
+    opacity: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+.music-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.music-toggle span {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background: #474747;
+    border-radius: 15px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.music-toggle span::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(19, 19, 19);
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: left 0.3s;
+}
+
+.music-toggle.active span {
+    background: #303030;
+}
+
+.music-toggle.active span::before {
+    left: 25px;
+}
+
+.cookie-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+    z-index: 1000;
+}
+
+.cookie-popup p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cookie-popup a {
+    color: #e7e7e7;
+    text-decoration: underline;
+}
+
+.cookie-popup a:hover {
+    color: #a3a3a3;
+}
+
+.cookie-popup button {
+    background-color: #494949;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background 0.3s;
+}
+
+.cookie-popup button:hover {
+    background-color: #858585;
+}
+
+.music-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    width: 280px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.music-info {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.music-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.music-buttons button {
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.music-buttons button:hover {
+    background: #555;
+}
+
+.music-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 4px;
+    background: #666;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: white;
+    transition: width 0.25s linear;
+}
